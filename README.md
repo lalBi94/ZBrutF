@@ -40,7 +40,7 @@ To get started, visit [ZBrutF](https://lalbi94.github.io/ZBrutF/) and try it out
 - [french_passwords_top20000](https://raw.githubusercontent.com/tarraschk/richelieu/master/french_passwords_top20000.txt) 
 - [french_passwords_top5000](https://raw.githubusercontent.com/tarraschk/richelieu/master/french_passwords_top5000.txt)
 
-## Credits
+## Credits (for wordlists)
 - [berzerk0](https://github.com/berzerk0)
 - [danielmiessler](https://github.com/danielmiessler)
 - [tarraschk](https://github.com/tarraschk)

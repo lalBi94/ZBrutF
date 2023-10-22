@@ -1,12 +1,12 @@
-# Disclaimer
+# Disclaimer ⚠️
 
-This project is provided for educational and research purposes only. The author of this project cannot be held responsible for any misuse or illegal use of the tool or the information it provides. The use of this site is entirely at the user's own risk.
+**This project is provided for educational and research purposes only. The author of this project cannot be held responsible for any misuse or illegal use of the tool or the information it provides. The use of this site is entirely at the user's own risk.**
 
-It is strongly recommended to comply with all local, national, and international laws and regulations regarding computer security, data protection, and privacy. The author disclaims all liability for inappropriate, illegal, or abusive use of this tool.
+**It is strongly recommended to comply with all local, national, and international laws and regulations regarding computer security, data protection, and privacy. The author disclaims all liability for inappropriate, illegal, or abusive use of this tool.**
 
-The author strongly encourages users to use this tool solely for the purpose of checking whether their own passwords may have been compromised.
+**The author strongly encourages users to use this tool solely for the purpose of checking whether their own passwords may have been compromised.**
 
-By using this site, you fully and unconditionally accept the terms outlined in this disclaimer.
+**By using this site, you fully and unconditionally accept the terms outlined in this disclaimer.**
 
 **The author reserves the right to modify this disclaimer at any time. Users are encouraged to regularly check this page for updates.**
 

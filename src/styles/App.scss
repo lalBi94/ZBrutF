@@ -1,0 +1,131 @@
+$text_size: 1.15em;
+$background: #272727;
+$white: #fff;
+$red: #b03636;
+$hoverred: #d24444;
+$black: #000;
+$semiwhite: rgb(230, 230, 230);
+$green: rgb(46, 172, 46);
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background: $background;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    #app-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 25%;
+        height: 100%;
+        gap: 20px;
+
+        #title-container {
+            h2, p {
+                text-align: center;
+                font-family: "Roboto", sans-serif;
+                color: $white;
+                font-weight: bold;
+            }
+        }
+
+        #convert-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid black;
+            width: 50%;
+
+            p {
+                text-align: center;
+                width: 100%;
+                word-wrap: break-word;
+                font-size: $text_size;
+            }
+        }
+
+        #button-container {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+
+            #clear {
+                background: $red;
+                color: $white;
+
+                &:hover {
+                    background: $hoverred;
+                }
+            }
+
+            #fire {
+                background: $semiwhite;
+                color: $black;
+
+                &:hover {
+                    background: $white;
+                }
+            }
+
+            button {
+                cursor: pointer;
+                text-align: center;
+                padding: 20px;
+                font-size: $text_size;
+                border: none;
+                border-radius: 50px;
+                font-weight: bold;
+            }
+        }
+
+        #crack-container {
+            display: flex;
+            flex-direction: row;
+            gap: 10px;
+
+            p {
+                color: $red;
+            }
+
+            input[type="text"] {
+                width: 60%;
+                padding: 20px;
+                text-align: center;
+                height: 20px;
+                font-size: $text_size;
+            }
+
+            select {
+                width: 33%;
+                text-align: center;
+                font-size: $text_size;
+                cursor: pointer;
+            }
+        }
+
+        #success-container {
+            border: 5px solid $green;
+            padding: 20px;
+
+            p {
+                font-family: "Roboto", sans-serif;
+                font-size: $text_size;
+                color: $white;
+                font-weight: bold;
+
+                span {
+                    color: $green;
+                }
+            }
+        }
+    }
+}

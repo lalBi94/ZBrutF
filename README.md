@@ -1,3 +1,15 @@
+# Disclaimer
+
+This project is provided for educational and research purposes only. The author of this project cannot be held responsible for any misuse or illegal use of the tool or the information it provides. The use of this site is entirely at the user's own risk.
+
+It is strongly recommended to comply with all local, national, and international laws and regulations regarding computer security, data protection, and privacy. The author disclaims all liability for inappropriate, illegal, or abusive use of this tool.
+
+The author strongly encourages users to use this tool in an ethical, responsible, and legal manner, respecting the privacy and security of others.
+
+By using this site, you fully and unconditionally accept the terms outlined in this disclaimer.
+
+**The author reserves the right to modify this disclaimer at any time. Users are encouraged to regularly check this page for updates.**
+
 ## The ZBrute Force
 
 ZBrutF, or "The ZBrute Force," is an online platform designed to assist you in searching for hash matches within a variety of wordlists for the most commonly used hashing algorithms. This platform allows you to compare hashes you provide with data extracted from these wordlists, covering MD5, SHA-1, SHA-3, SHA-256, SHA-512, and RIPMD-160 algorithms.

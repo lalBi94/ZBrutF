@@ -6,48 +6,52 @@ $hoverred: #d24444;
 $black: #000;
 $semiwhite: rgb(230, 230, 230);
 $green: rgb(46, 172, 46);
+$background2: #1e1e1e;
 
 html, body {
     height: 100%;
     margin: 0;
     padding: 0;
-    overflow: hidden;
     background: $background;
     display: flex;
     justify-content: center;
     align-items: center;
+    font-family: "Roboto", sans-serif;
+
+    @media (max-height: 700px) {
+        height: auto;
+        margin-bottom: 20px;
+    }
 
     #app-container {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        margin-bottom: 25%;
         height: 100%;
-        gap: 20px;
+        gap: 50px;
+        overflow: clip;
+
+        input[type="text"] {
+            width: 60%;
+            padding: 20px;
+            text-align: center;
+            height: 20px;
+            font-size: $text_size;
+        }
+
+        select {
+            width: 33%;
+            text-align: center;
+            font-size: $text_size;
+            cursor: pointer;
+        }
 
         #title-container {
             h2, p {
                 text-align: center;
-                font-family: "Roboto", sans-serif;
                 color: $white;
                 font-weight: bold;
-            }
-        }
-
-        #convert-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            align-items: center;
-            border: 1px solid black;
-            width: 50%;
-
-            p {
-                text-align: center;
-                width: 100%;
-                word-wrap: break-word;
-                font-size: $text_size;
             }
         }
 
@@ -87,43 +91,78 @@ html, body {
             }
         }
 
-        #crack-container {
+        #hash-container, #attack-container {
+            padding: 70px;
+            position: relative;
             display: flex;
-            flex-direction: row;
-            gap: 10px;
+            flex-direction: column;
+            gap: 1.45vw;
+            background: $background2;
+            border-radius: 10px;
+            width: 415px;
+            justify-content: center;
+            align-items: center;
 
-            p {
-                color: $red;
-            }
-
-            input[type="text"] {
-                width: 60%;
-                padding: 20px;
-                text-align: center;
-                height: 20px;
-                font-size: $text_size;
-            }
-
-            select {
-                width: 33%;
-                text-align: center;
-                font-size: $text_size;
-                cursor: pointer;
+            .title-border {
+                position: absolute;
+                top: 20px;
+                left: 20px;
+                color: $white;
+                font-weight: bold;
+                font-size: 1.2em;
             }
         }
 
-        #success-container {
-            border: 5px solid $green;
-            padding: 20px;
+        #hash-container {
+            position: relative;
 
-            p {
-                font-family: "Roboto", sans-serif;
-                font-size: $text_size;
-                color: $white;
-                font-weight: bold;
+            #hashed-container {
+                display: flex;
+                flex-direction: row;
+                gap: 2vw;
+            }
 
-                span {
-                    color: $green;
+            #hashed-succes-container {
+                position: relative;
+                width: inherit;
+                display: flex;
+                flex-wrap: wrap;
+
+                p {
+                    width: inherit;
+                    word-wrap: break-word;
+                    text-align: center;
+                    color: $white;
+                    font-size: $text_size;
+                }
+            }
+        }
+
+        #attack-container {
+            #crack-container {
+                display: flex;
+                flex-direction: row;
+                gap: 2vw;
+
+                p {
+                    text-align: center;
+                    color: $red;
+                }
+            }
+
+            #success-container {
+                border: 5px solid $green;
+                padding: 1vw;
+
+                p {
+                    font-size: $text_size;
+                    color: $white;
+                    font-weight: bold;
+                    text-align: center;
+
+                    span {
+                        color: $green;
+                    }
                 }
             }
         }

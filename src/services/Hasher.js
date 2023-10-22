@@ -16,18 +16,28 @@ export default class Hasher {
     constructor() {
         this.links = [
             "https://raw.githubusercontent.com/berzerk0/Probable-Wordlists/master/Real-Passwords/Top12Thousand-probable-v2.txt",
-            "https://raw.githubusercontent.com/danielmiessler/SecLists/master/Passwords/Common-Credentials/10-million-password-list-top-1000.txt",
             "https://raw.githubusercontent.com/danielmiessler/SecLists/master/Passwords/Common-Credentials/10-million-password-list-top-100.txt",
+            "https://raw.githubusercontent.com/suhasks123/hak5-MD5-Hashes/master/hak5.txt",
+            "https://raw.githubusercontent.com/danielmiessler/SecLists/master/Passwords/Common-Credentials/10-million-password-list-top-1000.txt",
+            "https://raw.githubusercontent.com/tarraschk/richelieu/master/french_passwords_top1000.txt",
             "https://raw.githubusercontent.com/danielmiessler/SecLists/master/Passwords/Common-Credentials/10-million-password-list-top-10000.txt",
             "https://raw.githubusercontent.com/danielmiessler/SecLists/master/Passwords/Common-Credentials/10-million-password-list-top-100000.txt",
             "https://raw.githubusercontent.com/danielmiessler/SecLists/master/Passwords/Common-Credentials/10-million-password-list-top-1000000.txt",
             "https://raw.githubusercontent.com/danielmiessler/SecLists/master/Passwords/Common-Credentials/100k-most-used-passwords-NCSC.txt",
             "https://raw.githubusercontent.com/danielmiessler/SecLists/master/Passwords/cirt-default-passwords.txt",
             "https://raw.githubusercontent.com/danielmiessler/SecLists/master/Passwords/darkweb2017-top10000.txt",
-            "https://raw.githubusercontent.com/tarraschk/richelieu/master/french_passwords_top1000.txt",
             "https://raw.githubusercontent.com/tarraschk/richelieu/master/french_passwords_top20000.txt",
             "https://raw.githubusercontent.com/tarraschk/richelieu/master/french_passwords_top5000.txt"
         ]
+
+        this.algoH = {
+            "MD5": MD5,
+            "SHA-1": SHA1,
+            "SHA-256": SHA256,
+            "SHA-512": SHA512,
+            "RIPEMD-160": RIPEMD160,
+            "SHA-3": SHA3
+        };
 
         this.limitPerChunk = 100
     }
@@ -36,34 +46,12 @@ export default class Hasher {
      * Get the hash version of one word
      * @param {string} method Hashing method
      * @param {string} word The word to convert
-     * @return {string}
+     * @return {Promise<string>}
      * */
     async hashVersionOf(method, word) {
-        switch(method) {
-            case "MD5" : {
-                return MD5(word).toString()
-            }
-
-            case "SHA-1" : {
-                return SHA1(word).toString()
-            }
-
-            case "SHA-256" : {
-                return SHA256(word).toString()
-            }
-
-            case "SHA-512" : {
-                return SHA512(word).toString()
-            }
-
-            case "RIPEMD-160" : {
-                return RIPEMD160(word).toString()
-            }
-
-            case "SHA-3" : {
-                return SHA3(word).toString()
-            }
-        }
+        try {
+            return this.algoH[method](word).toString();
+        } catch(donothing) {}
     }
 
     /**
@@ -76,7 +64,7 @@ export default class Hasher {
         /**
          * Check if value is contians in chunk
          * @param arr The chunk to browse
-         * @return {{found:null|string}}
+         * @return Promise<{{found:null|string}}>
          * */
         const make = async (arr) => {
             for(let i = 0; i <= arr.length-1; ++i) {
@@ -92,8 +80,9 @@ export default class Hasher {
 
         /**
          * Create array with this.limitPerChunk chunks
+         * @async
          * @param {array} arr The wordlist
-         * @return {{ok:boolean,v:null|string}}
+         * @return {Promise<{ok:boolean,v:null|string}>}
          * */
         const browse = async (arr) => {
             for(let i = 0; i <= arr.length-1; i += this.limitPerChunk) {
@@ -120,9 +109,7 @@ export default class Hasher {
                         return {ok: true, v: check.v}
                     }
                 }
-            } catch (err) {
-                return {ok: false, v: null}
-            }
+            } catch (donothing) {}
         }
 
         return {ok: false, v: null}

@@ -12,6 +12,10 @@ export default function App() {
 	const [process, setProcess] = useState(false)
 	const [lockDown, setLockDown] = useState(false)
 
+	const [toHashWord, setToHashWord] = useState("")
+	const [toHashMethod, setToHashMethod] = useState("MD5")
+	const [previzu, setPrevizu] = useState("")
+
 	const handleWord = (event) => {
 		setStatus({ok: false, v: null})
 		setWord(event.target.value)
@@ -20,6 +24,22 @@ export default function App() {
 	const handleHash = (event) => {
 		setStatus({ok: false, v: null})
 		setHash(event.target.value)
+	}
+
+	const handleToHashWord = (event) => {
+		setToHashWord(event.target.value)
+
+		hasher.hashVersionOf(toHashMethod, event.target.value).then((r) => {
+			setPrevizu(r)
+		})
+	}
+
+	const handleToHashMethod = (event) => {
+		setToHashMethod(event.target.value)
+
+		hasher.hashVersionOf(event.target.value, toHashWord).then((r) => {
+			setPrevizu(r)
+		})
 	}
 
 	const handleFire = () => {
@@ -45,6 +65,7 @@ export default function App() {
 	}
 
 	const handleClear = () => {
+		setStatus({ok: false, v: null})
 		localStorage.clear()
 	}
 
@@ -57,52 +78,86 @@ export default function App() {
 				</p>
 			</div>
 
-			<div id="crack-container">
-				<input
-					type="text"
-					placeholder="The hashed word"
-					onChange={handleWord}
-					disabled={lockDown}
-				/>
+			<div id="hash-container">
+				<span className="title-border">Hash converter</span>
 
-				{ data.available.length > 0 ?
-					<select onChange={handleHash} disabled={lockDown}>
-						{ data.available.map((v, key) => (
-							<option key={key}>
-								{v}
-							</option>
-						)) }
-					</select>
-				:
-					<p>
-						No hash available
-					</p>
-				}
+				{ toHashWord ?
+					<div id="hashed-succes-container">
+						<p>{previzu}</p>
+					</div>
+				: null }
+
+				<div id="hashed-container">
+					<input
+						type="text"
+						placeholder="The word to hash"
+						onChange={handleToHashWord}
+						disabled={lockDown}
+					/>
+
+					{ data.available.length > 0 ?
+						<select onChange={handleToHashMethod} disabled={lockDown}>
+							{ data.available.map((v, key) => (
+								<option key={key}>
+									{v}
+								</option>
+							)) }
+						</select>
+					: null }
+				</div>
 			</div>
 
-			<div id="button-container">
-				<button id="fire" onClick={handleFire} disabled={lockDown}>
-					Fire
-				</button>
+			<div id="attack-container">
+				<span className="title-border">Attack</span>
 
-				<button id="clear" onClick={handleClear} disabled={lockDown}>
-					<nobr>Clear Cache</nobr>
-				</button>
+				<div id="crack-container">
+					<input
+						type="text"
+						placeholder="The hashed word"
+						onChange={handleWord}
+						disabled={lockDown}
+					/>
+
+					{ data.available.length > 0 ?
+						<select onChange={handleHash} disabled={lockDown}>
+							{ data.available.map((v, key) => (
+								<option key={key}>
+									{v}
+								</option>
+							)) }
+						</select>
+						:
+						<p>
+							No hash available
+						</p>
+					}
+				</div>
+
+				<div id="button-container">
+					<button id="fire" onClick={handleFire} disabled={lockDown}>
+						Fire
+					</button>
+
+					<button id="clear" onClick={handleClear} disabled={lockDown}>
+						<nobr>Clear Cache</nobr>
+					</button>
+				</div>
+
+				{ process ?
+					<div id="process-container">
+						<ReactLoading type="spin" color="white"/>
+					</div>
+				: null}
+
+				{ status.v !== null && status.ok ?
+					<div id="success-container">
+						<p>
+							<span>Found</span> : {status.v}
+						</p>
+					</div>
+				: null }
+
 			</div>
-
-			{ process ?
-				<div id="process-container">
-					<ReactLoading type="spin" color="white"/>
-				</div>
-			: null}
-
-			{ status.v !== null && status.ok ?
-				<div id="success-container">
-					<p>
-						<span>Found</span> : {status.v}
-					</p>
-				</div>
-			: null }
 		</div>
 	)
 }

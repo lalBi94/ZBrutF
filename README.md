@@ -25,3 +25,22 @@ The goal of ZBrutF is to help you determine whether a specific hash corresponds 
 Please remember that the use of this platform should comply with all applicable laws and regulations, and it should only be used for lawful and ethical activities.
 
 To get started, visit [ZBrutF](https://lalbi94.github.io/ZBrutF/) and try it out for yourself!
+
+## Wordlists
+- [Top12Thousand-probable-v2](https://raw.githubusercontent.com/berzerk0/Probable-Wordlists/master/Real-Passwords/Top12Thousand-probable-v2.txt) 
+- [10-million-password-list-top-1000](https://raw.githubusercontent.com/danielmiessler/SecLists/master/Passwords/Common-Credentials/10-million-password-list-top-1000.txt) 
+- [10-million-password-list-top-100](https://raw.githubusercontent.com/danielmiessler/SecLists/master/Passwords/Common-Credentials/10-million-password-list-top-100.txt) 
+- [10-million-password-list-top-10000](https://raw.githubusercontent.com/danielmiessler/SecLists/master/Passwords/Common-Credentials/10-million-password-list-top-10000.txt) 
+- [10-million-password-list-top-100000](https://raw.githubusercontent.com/danielmiessler/SecLists/master/Passwords/Common-Credentials/10-million-password-list-top-100000.txt) 
+- [10-million-password-list-top-1000000](https://raw.githubusercontent.com/danielmiessler/SecLists/master/Passwords/Common-Credentials/10-million-password-list-top-1000000.txt) 
+- [100k-most-used-passwords-NCSC](https://raw.githubusercontent.com/danielmiessler/SecLists/master/Passwords/Common-Credentials/100k-most-used-passwords-NCSC.txt) 
+- [cirt-default-passwords](https://raw.githubusercontent.com/danielmiessler/SecLists/master/Passwords/cirt-default-passwords.txt) 
+- [darkweb2017-top10000](https://raw.githubusercontent.com/danielmiessler/SecLists/master/Passwords/darkweb2017-top10000.txt) 
+- [french_passwords_top1000](https://raw.githubusercontent.com/tarraschk/richelieu/master/french_passwords_top1000.txt) 
+- [french_passwords_top20000](https://raw.githubusercontent.com/tarraschk/richelieu/master/french_passwords_top20000.txt) 
+- [french_passwords_top5000](https://raw.githubusercontent.com/tarraschk/richelieu/master/french_passwords_top5000.txt)
+
+## Credits
+- [berzerk0](https://github.com/berzerk0)
+- [danielmiessler](https://github.com/danielmiessler)
+- [tarraschk](https://github.com/tarraschk)

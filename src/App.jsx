@@ -108,7 +108,9 @@ export default function App() {
 			</div>
 
 			<div id="attack-container">
-				<span className="title-border">Attack</span>
+				<span className="title-border">
+					Attack <a href="https://github.com/lalBi94/ZBrutF#disclaimer-%EF%B8%8F" target="_blank" rel="noreferrer">(Click here before use)</a>
+				</span>
 
 				<div id="crack-container">
 					<input

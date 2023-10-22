@@ -10,7 +10,6 @@ import { MD5, SHA1, SHA256, SHA512, RIPEMD160, SHA3 } from 'crypto-js';
  * @link https://github.com/lalBi94
  * @copyright © 2023 Boudjemline
  * @contact : bilal@boudjemline.fr
- * Many thanks to berzerk0 and danielmiessler for their wordlists.
  */
 export default class Hasher {
     constructor() {

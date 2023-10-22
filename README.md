@@ -56,3 +56,4 @@ To get started, visit [ZBrutF](https://lalbi94.github.io/ZBrutF/) and try it out
 - [berzerk0](https://github.com/berzerk0)
 - [danielmiessler](https://github.com/danielmiessler)
 - [tarraschk](https://github.com/tarraschk)
+- [suhasks123](https://github.com/suhasks123)

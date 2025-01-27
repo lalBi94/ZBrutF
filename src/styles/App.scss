@@ -7,30 +7,66 @@ $black: #000;
 $semiwhite: rgb(230, 230, 230);
 $green: rgb(46, 172, 46);
 $background2: #1e1e1e;
+$resp: 900px;
 
-html, body {
+body {
     height: 100%;
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
     background: $background;
     display: flex;
     justify-content: center;
-    align-items: center;
     font-family: "Roboto", sans-serif;
 
     @media (max-height: 700px) {
         height: auto;
-        margin-bottom: 20px;
     }
 
     #app-container {
         display: flex;
         flex-direction: column;
-        justify-content: center;
         align-items: center;
-        height: 100%;
-        gap: 50px;
-        overflow: clip;
+        height: 100vh;
+        gap: 15px;
+
+        nav {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            img {
+                width: 120px;
+            }
+        }
+
+        footer {
+            display: flex;
+            flex-direction: column;
+
+            #footer-head {
+                p {
+                    text-align: center;
+                    font-weight: bold;
+                    color: white;
+                }
+            }
+
+            #footer-content {
+                display: flex;
+                flex-direction: row;
+                gap: 10px;
+
+                a {
+                    color: white;
+                    text-decoration: none;
+
+                    &:hover {
+                        border-bottom: 1px solid white;
+                    }
+                }
+            }
+        }
 
         input[type="text"] {
             width: 60%;
@@ -58,9 +94,7 @@ html, body {
         #button-container {
             display: flex;
             flex-direction: row;
-            justify-content: center;
-            align-items: center;
-            gap: 15px;
+            gap: 10px;
 
             #clear {
                 background: $red;
@@ -83,30 +117,28 @@ html, body {
             button {
                 cursor: pointer;
                 text-align: center;
-                padding: 20px;
+                padding: 12px;
                 font-size: $text_size;
                 border: none;
-                border-radius: 50px;
-                font-weight: bold;
+                border-radius: 10px;
             }
         }
 
         #hash-container, #attack-container {
-            padding: 70px;
             position: relative;
             display: flex;
             flex-direction: column;
-            gap: 1.45vw;
+            gap: 20px;
             background: $background2;
             border-radius: 10px;
-            width: 415px;
-            justify-content: center;
-            align-items: center;
+            max-width: 500px;
+            padding: 20px;
+
+            @media (max-width: $resp) {
+                max-width: 90%;
+            }
 
             .title-border {
-                position: absolute;
-                top: 20px;
-                left: 20px;
                 color: $white;
                 font-weight: bold;
                 font-size: 1.2em;
@@ -117,31 +149,25 @@ html, body {
                     background: $red;
                     padding: 2.5px;
                     border-radius: 5px;
+
+                    &:hover {
+                        background: $hoverred;
+                    }
                 }
             }
         }
 
         #hash-container {
-            position: relative;
-
             #hashed-container {
                 display: flex;
                 flex-direction: row;
-                gap: 2vw;
+                gap: 10px;
             }
 
             #hashed-succes-container {
-                position: relative;
-                width: inherit;
-                display: flex;
-                flex-wrap: wrap;
-
                 p {
-                    width: inherit;
-                    word-wrap: break-word;
-                    text-align: center;
+                    word-wrap: text;
                     color: $white;
-                    font-size: $text_size;
                 }
             }
         }
@@ -150,7 +176,7 @@ html, body {
             #crack-container {
                 display: flex;
                 flex-direction: row;
-                gap: 2vw;
+                gap: 10px;
 
                 p {
                     text-align: center;
@@ -158,19 +184,29 @@ html, body {
                 }
             }
 
-            #success-container {
-                border: 5px solid $green;
-                padding: 1vw;
+            .res-content {
+                padding: 10px;
 
                 p {
                     font-size: $text_size;
                     color: $white;
                     font-weight: bold;
                     text-align: center;
+                }
+            }
 
-                    span {
-                        color: $green;
-                    }
+            #success-container {
+                border: 5px solid $green;
+
+                span {
+                    color: $green;
+                }
+            }
+
+            #error-container {
+                border: 5px solid $red;
+                span {
+                    color: $red;
                 }
             }
         }

@@ -26,19 +26,59 @@ export default class Hasher {
             "https://raw.githubusercontent.com/danielmiessler/SecLists/master/Passwords/cirt-default-passwords.txt",
             "https://raw.githubusercontent.com/danielmiessler/SecLists/master/Passwords/darkweb2017-top10000.txt",
             "https://raw.githubusercontent.com/tarraschk/richelieu/master/french_passwords_top20000.txt",
-            "https://raw.githubusercontent.com/tarraschk/richelieu/master/french_passwords_top5000.txt"
-        ]
+            "https://raw.githubusercontent.com/tarraschk/richelieu/master/french_passwords_top5000.txt",
+            "https://raw.githubusercontent.com/danielmiessler/SecLists/refs/heads/master/Passwords/Books/greatest_books_of_all_time_lowercase.txt",
+            "https://raw.githubusercontent.com/danielmiessler/SecLists/refs/heads/master/Passwords/Books/greatest_books_of_all_time_original.txt",
+            "https://raw.githubusercontent.com/danielmiessler/SecLists/refs/heads/master/Passwords/Books/greatest_books_of_all_time_uppercase.txt",
+            "https://raw.githubusercontent.com/danielmiessler/SecLists/refs/heads/master/Passwords/Books/greatest_books_of_all_time_with_leet_variations.txt",
+            "https://raw.githubusercontent.com/danielmiessler/SecLists/refs/heads/master/Passwords/Common-Credentials/Language-Specific/Chinese-common-password-list-top-1000.txt",
+            "https://raw.githubusercontent.com/danielmiessler/SecLists/refs/heads/master/Passwords/Common-Credentials/Language-Specific/German_common-password-list-top-1000.txt",
+            "https://raw.githubusercontent.com/danielmiessler/SecLists/refs/heads/master/Passwords/Common-Credentials/Language-Specific/Spanish_1000-common-usernames-and-passwords.txt",
+            "https://raw.githubusercontent.com/danielmiessler/SecLists/refs/heads/master/Passwords/Common-Credentials/1900-2020.txt",
+            "https://raw.githubusercontent.com/danielmiessler/SecLists/refs/heads/master/Passwords/Common-Credentials/best1050.txt",
+            "https://raw.githubusercontent.com/danielmiessler/SecLists/refs/heads/master/Passwords/Common-Credentials/medical-devices.txt",
+            "https://raw.githubusercontent.com/danielmiessler/SecLists/refs/heads/master/Passwords/Cracked-Hashes/milw0rm-dictionary.txt",
+            "https://raw.githubusercontent.com/danielmiessler/SecLists/refs/heads/master/Passwords/Default-Credentials/Routers/0ALL-USERNAMES-AND-PASSWORDS.txt",
+            "https://raw.githubusercontent.com/danielmiessler/SecLists/refs/heads/master/Passwords/Honeypot-Captures/multiplesources-passwords-fabian-fingerle.de.txt",
+            "https://raw.githubusercontent.com/danielmiessler/SecLists/refs/heads/master/Passwords/Keyboard-Walks/Keyboard-Combinations.txt",
+            "https://raw.githubusercontent.com/danielmiessler/SecLists/refs/heads/master/Passwords/Software/cain-and-abel.txt",
+            "https://raw.githubusercontent.com/danielmiessler/SecLists/refs/heads/master/Passwords/Software/cain-and-abel.txt",
+            "https://raw.githubusercontent.com/danielmiessler/SecLists/refs/heads/master/Passwords/Software/john-the-ripper.txt",
+            "https://raw.githubusercontent.com/danielmiessler/SecLists/refs/heads/master/Passwords/WiFi-WPA/probable-v2-wpa-top447.txt",
+            "https://raw.githubusercontent.com/danielmiessler/SecLists/refs/heads/master/Passwords/WiFi-WPA/probable-v2-wpa-top4800.txt",
+            "https://raw.githubusercontent.com/danielmiessler/SecLists/refs/heads/master/Passwords/WiFi-WPA/probable-v2-wpa-top62.txt",
+            "https://raw.githubusercontent.com/danielmiessler/SecLists/refs/heads/master/Passwords/Default-Credentials/ftp-betterdefaultpasslist.txt",
+            "https://raw.githubusercontent.com/danielmiessler/SecLists/refs/heads/master/Passwords/Default-Credentials/ssh-betterdefaultpasslist.txt",
+            "https://raw.githubusercontent.com/xmendez/wfuzz/refs/heads/master/wordlist/general/big.txt",
+            "https://raw.githubusercontent.com/xmendez/wfuzz/refs/heads/master/wordlist/general/catala.txt",
+            "https://raw.githubusercontent.com/xmendez/wfuzz/refs/heads/master/wordlist/general/common.txt",
+            "https://raw.githubusercontent.com/danielmiessler/SecLists/refs/heads/master/Passwords/Pwdb-Public/Wordlists/Language-Specifics/ignis-cantonese-150.txt",
+            "https://raw.githubusercontent.com/danielmiessler/SecLists/refs/heads/master/Passwords/Pwdb-Public/Wordlists/Language-Specifics/ignis-crotian-150.txt",
+            "https://raw.githubusercontent.com/danielmiessler/SecLists/refs/heads/master/Passwords/Pwdb-Public/Wordlists/Language-Specifics/ignis-danish-150.txt",
+            "https://raw.githubusercontent.com/danielmiessler/SecLists/refs/heads/master/Passwords/Pwdb-Public/Wordlists/Language-Specifics/ignis-estonaian-150.txt",
+            "https://raw.githubusercontent.com/danielmiessler/SecLists/refs/heads/master/Passwords/Pwdb-Public/Wordlists/Language-Specifics/ignis-finnish-150.txt",
+            "https://raw.githubusercontent.com/danielmiessler/SecLists/refs/heads/master/Passwords/Pwdb-Public/Wordlists/Language-Specifics/ignis-french-150.txt",
+            "https://raw.githubusercontent.com/danielmiessler/SecLists/refs/heads/master/Passwords/Pwdb-Public/Wordlists/Language-Specifics/ignis-german-150.txt",
+            "https://raw.githubusercontent.com/danielmiessler/SecLists/refs/heads/master/Passwords/Pwdb-Public/Wordlists/Language-Specifics/ignis-greek-150.txt",
+            "https://raw.githubusercontent.com/danielmiessler/SecLists/refs/heads/master/Passwords/Pwdb-Public/Wordlists/Language-Specifics/ignis-hebrew-150.txt",
+            "https://raw.githubusercontent.com/danielmiessler/SecLists/refs/heads/master/Passwords/Pwdb-Public/Wordlists/Language-Specifics/ignis-hindi-150.txt",
+            "https://raw.githubusercontent.com/danielmiessler/SecLists/refs/heads/master/Passwords/Pwdb-Public/Wordlists/ignis-100K.txt",
+            "https://raw.githubusercontent.com/danielmiessler/SecLists/refs/heads/master/Passwords/Pwdb-Public/Wordlists/ignis-10K.txt",
+            "https://raw.githubusercontent.com/danielmiessler/SecLists/refs/heads/master/Passwords/Pwdb-Public/Wordlists/ignis-10M.txt",
+            "https://raw.githubusercontent.com/danielmiessler/SecLists/refs/heads/master/Passwords/Pwdb-Public/Wordlists/ignis-1K.txt",
+            "https://raw.githubusercontent.com/danielmiessler/SecLists/refs/heads/master/Passwords/Pwdb-Public/Wordlists/ignis-1M.txt",
+        ];
 
         this.algoH = {
-            "MD5": MD5,
+            MD5: MD5,
             "SHA-1": SHA1,
             "SHA-256": SHA256,
             "SHA-512": SHA512,
             "RIPEMD-160": RIPEMD160,
-            "SHA-3": SHA3
+            "SHA-3": SHA3,
         };
 
-        this.limitPerChunk = 100
+        this.limitPerChunk = 100;
     }
 
     /**
@@ -50,7 +90,41 @@ export default class Hasher {
     async hashVersionOf(method, word) {
         try {
             return this.algoH[method](word).toString();
-        } catch(donothing) {}
+        } catch (donothing) {}
+    }
+
+    /**
+     * Check if value is contians in chunk
+     * @param arr The chunk to browse
+     * @return Promise<{{found:null|string}}>
+     * */
+    async make(arr, method, word) {
+        for (let i = 0; i <= arr.length - 1; ++i) {
+            const hashed = await this.hashVersionOf(method, arr[i]);
+
+            if (hashed === word) {
+                return { found: arr[i] };
+            }
+        }
+
+        return { found: null };
+    }
+
+    /**
+     * Create array with this.limitPerChunk chunks
+     * @async
+     * @param {array} arr The wordlist
+     * @return {Promise<{ok:boolean,v:null|string}>}
+     * */
+    async browse(arr, method, word) {
+        for (let i = 0; i <= arr.length - 1; i += this.limitPerChunk) {
+            const chunk = arr.slice(i, i + this.limitPerChunk);
+            const check = await this.make(chunk, method, word);
+
+            if (check.found !== null) return { ok: true, v: check.found };
+        }
+
+        return { ok: false, v: null };
     }
 
     /**
@@ -60,57 +134,24 @@ export default class Hasher {
      * @return {boolean}
      * */
     async fire(method, word) {
-        /**
-         * Check if value is contians in chunk
-         * @param arr The chunk to browse
-         * @return Promise<{{found:null|string}}>
-         * */
-        const make = async (arr) => {
-            for(let i = 0; i <= arr.length-1; ++i) {
-                const hashed = await this.hashVersionOf(method, arr[i])
-
-                if(hashed === word) {
-                    return {found: arr[i]}
-                }
-            }
-
-            return {found: null}
-        }
-
-        /**
-         * Create array with this.limitPerChunk chunks
-         * @async
-         * @param {array} arr The wordlist
-         * @return {Promise<{ok:boolean,v:null|string}>}
-         * */
-        const browse = async (arr) => {
-            for(let i = 0; i <= arr.length-1; i += this.limitPerChunk) {
-                const chunk = arr.slice(i, i + this.limitPerChunk)
-                const check = await make(chunk)
-
-                if(check.found !== null)
-                    return {ok: true, v: check.found}
-            }
-
-            return {ok: false, v: null}
-        }
-
-        for(let link of this.links) {
+        for (let link of this.links) {
             try {
-                const req = await fetch(link)
+                const req = await fetch(link);
 
-                if(req.ok) {
-                    let content = await req.text()
-                    let transf = content.split('\n')
-                    let check = await browse(transf)
+                if (req.ok) {
+                    let content = await req.text();
+                    let transf = content.split("\n");
+                    let check = await this.browse(transf, method, word);
 
-                    if(check.ok) {
-                        return {ok: true, v: check.v}
+                    if (check.ok) {
+                        return { ok: true, v: check.v };
                     }
                 }
-            } catch (donothing) {}
+            } catch (err) {
+                console.error(err);
+            }
         }
 
-        return {ok: false, v: null}
+        return { ok: false, v: null };
     }
 }
